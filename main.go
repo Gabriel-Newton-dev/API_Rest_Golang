@@ -7,6 +7,9 @@ import (
 )
 
 func main() {
+
+	models.Personalidades
+
 	fmt.Println("Iniciando nosso servidor Rest em Go")
 	routes.HandleRequest()
 
