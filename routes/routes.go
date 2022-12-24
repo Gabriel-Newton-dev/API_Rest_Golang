@@ -9,7 +9,7 @@ import (
 
 // HandleRequest(lhe dar com requisição) convenção de utilizar
 func HandleRequest() {
-	http.HandleFunc("/", controllers.Home) // handleFunc - lhe dar com a função.
-	// toda vez que ele receber um "/"" ele irá executar a nossa função Home.
+	http.HandleFunc("/", controllers.Home) // handleFunc - lhe dar com a função. // toda vez que ele receber um "/"" ele irá executar a nossa função Home.
+	http.HandleFunc("/personalidades", controllers.TodasPersonalidades)
 	log.Fatal(http.ListenAndServe(":7500", nil))
 }
