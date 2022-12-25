@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"strconv"
 
 	"github.com/Gabriel-Newton-dev/API_Rest_Golang/models"
 	"github.com/gorilla/mux"
@@ -21,7 +22,11 @@ func TodasPersonalidades(w http.ResponseWriter, r *http.Request) {
 
 func RetornaUmaPersonalidade(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
-	id := vars("id")
+	id := vars["id"]
 
-	for 
+	for _, value := range models.Personalidades {
+		if strconv.Itoa(value.Id) == id {
+			json.NewEncoder(w).Encode(value)
+		}
+	}
 }
