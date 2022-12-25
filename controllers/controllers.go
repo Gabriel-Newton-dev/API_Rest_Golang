@@ -24,9 +24,9 @@ func RetornaUmaPersonalidade(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id := vars["id"]
 
-	for _, value := range models.Personalidades {
-		if strconv.Itoa(value.Id) == id {
-			json.NewEncoder(w).Encode(value)
+	for _, personalidade := range models.Personalidades {
+		if strconv.Itoa(personalidade.Id) == id {
+			json.NewEncoder(w).Encode(personalidade)
 		}
 	}
 }
