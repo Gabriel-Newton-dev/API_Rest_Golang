@@ -24,8 +24,9 @@ func ConectaComBancoDeDados() {
 	StringDeConexao := fmt.Sprintf("host=localhost user=%s password=%s dbname=%s sslmode=disable", DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME)
 	DB, err := gorm.Open(postgres.Open(StringDeConexao), &gorm.Config{})
 	if err != nil {
-		log.Fatal()
+		log.Panic("Erro ao conectar com banco de dados.")
 	}
 	DB.AutoMigrate(&models.Personalidade{})
-
 }
+
+// Caso precise utilziar um banco de dados a parte sem ser pelo docker.
