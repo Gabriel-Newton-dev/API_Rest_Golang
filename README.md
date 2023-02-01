@@ -85,7 +85,7 @@ Em [issues](https://github.com/Gabriel-Newton-dev/API_Rest_Golang/issues) foram 
 
 ## Desenvolvedor:
 
-<img src="/image/fotopf2.jpeg" width=125px>
+- [Gabriel Newton](https://gabriel-newton-dev.github.io/)
 
 ## Licença 
 
