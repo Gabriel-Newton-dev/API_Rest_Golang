@@ -13,7 +13,7 @@ func HandleRequest() {
 	r := mux.NewRouter()
 	r.HandleFunc("/", controllers.Home) // handleFunc - lhe dar com a função. // toda vez que ele receber um "/"" ele irá executar a nossa função Home.
 	r.HandleFunc("/api/personalidades", controllers.TodasPersonalidades).Methods("Get")
-	r.HandleFunc("/api/personalidades/{id}", controllers.RetornaUmaPersoalidade).Methods("Get")
+	//r.HandleFunc("/api/personalidades/{id}", controllers.RetornaUmaPersonalidade).Methods("Get")
 
 	log.Fatal(http.ListenAndServe(":7500", r))
 }
