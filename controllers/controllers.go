@@ -19,9 +19,9 @@ func Home(w http.ResponseWriter, r *http.Request) {
 }
 
 func TodasPersonalidades(w http.ResponseWriter, r *http.Request) {
-	var personalidade []models.Personalidade
-	database.DB.Find(&personalidade)
-	json.NewEncoder(w).Encode(personalidade)
+	var p []models.Personalidade
+	database.DB.Find(&p)
+	json.NewEncoder(w).Encode(p)
 }
 
 func RetornaUmaPersonalidade(w http.ResponseWriter, r *http.Request) {
