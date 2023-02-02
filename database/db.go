@@ -22,7 +22,7 @@ func ConectaComBancoDeDados() {
 	DATABASE_PASSWORD := viper.Get("DATABASE_PASSWORD")
 
 	StringDeConexao := fmt.Sprintf("host=localhost user=%s password=%s dbname=%s sslmode=disable", DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME)
-	DB, err := gorm.Open(postgres.Open(StringDeConexao), &gorm.Config{})
+	DB, err := gorm.Open(postgres.Open(StringDeConexao))
 	if err != nil {
 		log.Panic("Erro ao conectar com banco de dados.")
 	}
