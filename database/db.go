@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 
+	"github.com/Gabriel-Newton-dev/API_Rest_Golang/models"
 	"github.com/spf13/viper"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -25,7 +26,7 @@ func ConectaComBancoDeDados() {
 	if err != nil {
 		log.Panic("Erro ao conectar com banco de dados.")
 	}
-	DB.AutoMigrate()
+	DB.AutoMigrate(&models.Personalidade{})
 }
 
 // Caso precise utilziar um banco de dados a parte sem ser pelo docker.
