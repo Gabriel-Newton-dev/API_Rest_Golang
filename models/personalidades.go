@@ -9,5 +9,4 @@ type Personalidade struct {
 	Historia string `json:"historia"`
 }
 
-// Slice de Personalidade dentro da variavel Personalidades.
 var Personalidades []Personalidade
