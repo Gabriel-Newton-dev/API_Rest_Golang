@@ -24,8 +24,6 @@
 ## Descrição do projeto 
 
 <p align="justify">
-  Codei essa Api usando apenas Golang.  
-
 Desenvolvi uma API rest do zero, criando rotas, endpoints, modelos etc. Conectei a minha aplicação com um banco de dados Postgres o qual configurei  usando o Docker-compose. Além disso, implementei o CRUD completo(GET, PATCH, POST, DELETE), fiz rotas para busca por ID, CPF e RG.
 
 </p>
