@@ -27,6 +27,11 @@ func ConectaComBancoDeDados() {
 		log.Panic("Erro ao conectar com banco de dados.")
 	}
 	DB.AutoMigrate(&models.Personalidade{})
+	DB.AutoMigrate(&models.User{})
 }
 
 // Caso precise utilziar um banco de dados a parte sem ser pelo docker.
+
+func GetDatabase() *gorm.DB {
+	return DB
+}
